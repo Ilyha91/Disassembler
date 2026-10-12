@@ -236,7 +236,7 @@ def program():
                                 list_of_commands[-1].append(f"r{int(R2, 2)}")
                         if len(operand3) != 0:
                             list_of_commands[-1].append(f"{int(operand3, 2)}")
-                        if maybe_cmds[d][0] == "ld":
+                        if maybe_cmds[d][0] == "ld" or maybe_cmds[d][0] == "st" or maybe_cmds[d][0] == "lpm":
                             list_of_commands[-1].append(f"{maybe_cmds[d][-1]}")
                         bit_counter += 2
                         break # для того, чтобы остановился на первой найденной приоритеной команде
